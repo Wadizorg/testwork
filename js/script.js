@@ -265,9 +265,9 @@ var SamsungAd = function () {
 
 
 var images = [
-    'testwork/images/phone_sprite.png',
-    'testwork/images/T_SliderText.png',
-    'testwork/images/T_CTA.png'
+    '/images/phone_sprite.png',
+    '/images/T_SliderText.png',
+    '/images/T_CTA.png'
 ];
 
 
