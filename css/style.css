@@ -1,0 +1,431 @@
+@keyframes cardHighlight {
+    from {
+        background-position: -200px 0;
+    }
+    to {
+        background-position: 100px 0;
+    }
+}
+
+@keyframes rainDrop {
+    0% {
+        width: 50px;
+        height: 50px;
+        margin-top: -25px;
+        margin-left: -25px;
+    }
+}
+
+@keyframes rainMove {
+    100% {
+        top: 110%;
+    }
+}
+
+.main-container {
+    width: 968px;
+    height: 248px;
+    border: 1px solid #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.image,
+.description,
+.raindrop-aria,
+.draginfo,
+.close-ad,
+.buy-now,
+.description-fade-aria,
+.image-fade-aria,
+.internals-frame,
+.ytb-video,
+.ytb-highlight,
+.raindrop1,
+.raindrop2,
+.raindrop3,
+.raindrop4 {
+    display: inline-block;
+    position: absolute;
+}
+
+.image {
+    width: 515px;
+    height: 220px;
+    bottom: -220px;
+    right: 180px;
+    z-index: 1;
+    background: url("../images/phone_sprite.png") 0 0 no-repeat;
+}
+
+.show .image {
+    bottom: 30px;
+    -webkit-transition: bottom 0.7s ease-out 0s;
+    -moz-transition: bottom 0.7s ease-out 0s;
+    -o-transition: bottom 0.7s ease-out 0s;
+    transition: bottom 0.7s ease-out 0s;
+}
+
+.raindrop-aria {
+    width: 515px;
+    height: 220px;
+    bottom: 15px;
+    right: 180px;
+    z-index: 1;
+}
+
+.raindrop-aria.drop {
+    z-index: 2;
+}
+
+.raindrop-aria div[class*="raindrop"] {
+    background-size: 100% 100%;
+    -webkit-animation: rainDrop 0.2s ease 0s 1 none, rainMove 1s ease-in 0.5s 1 forwards;
+    -moz-animation: rainDrop 0.2s ease 0s 1 none, rainMove 1s ease-in 0.5s 1 forwards;
+    -o-animation: rainDrop 0.2s ease 0s 1 none, rainMove 1s ease-in 0.5s 1 forwards;
+    animation: rainDrop 0.2s ease 0s 1 none, rainMove 1s ease-in 0.5s 1 forwards;
+}
+
+.raindrop1 {
+    width: 29px;
+    height: 27px;
+    background: url("../images/raindrop_1.png") no-repeat;
+}
+
+.raindrop2 {
+    width: 15px;
+    height: 23px;
+    background: url("../images/raindrop_2.png") no-repeat;
+}
+
+.raindrop3 {
+    width: 19px;
+    height: 19px;
+    background: url("../images/raindrop_3.png") no-repeat;
+}
+
+.raindrop4 {
+    width: 15px;
+    height: 23px;
+    background: url("../images/raindrop_4.png") no-repeat;
+}
+
+.ytb-video,
+.ytb-highlight {
+    display: none;
+}
+
+.play .ytb-highlight {
+    display: block;
+    right: -113px;
+    width: 970px;
+    margin: 0 auto;
+    height: 250px;
+    z-index: 9;
+    background: url(../images/970x250_highlights.png) no-repeat;
+    background-size: contain;
+    background-position-x: 50px;
+    background-position-y: -10px;
+	}
+
+.play .ytb-video {
+    display: block;
+    width: 363px;
+    height: 198px;
+    top: 14px;
+    left: 77px;
+}
+
+.image-fade-aria {
+    z-index: 0;
+    opacity: 0;
+    width: 515px;
+    height: 220px;
+    bottom: 30px;
+    right: 180px;
+    background: url("../images/phone_sprite.png") 0 0 no-repeat white;
+}
+
+.fade.image-fade-aria {
+    opacity: 1;
+    z-index: 2;
+    -webkit-transition: opacity 0.7s ease-out 0s;
+    -moz-transition: opacity 0.7s ease-out 0s;
+    -o-transition: opacity 0.7s ease-out 0s;
+    transition: opacity 0.7s ease-out 0s;
+}
+
+.internals-frame {
+    width: 56px;
+    height: 46px;
+    bottom: 36px;
+    left: 78px;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.internals-frame-img {
+    position: absolute;
+    top: -1px;
+    width: 56px;
+    height: 47px;
+    z-index: 3;
+    background: url("../images/internals_frame.png") 0 0 no-repeat;
+}
+
+.card-highlight {
+    position: relative;
+    width: 55px;
+    height: 60px;
+    top: -5px;
+    left: 0;
+    overflow: hidden;
+    z-index: 2;
+    -webkit-transform: rotate(300deg);
+    -moz-transform: rotate(300deg);
+    transform: rotate(300deg);
+    background: url("../images/card_highlight.png") -200px 0 no-repeat;
+}
+
+.fade.image-fade-aria .card-highlight {
+    -webkit-animation: cardHighlight 0.7s ease 2s 2;
+    -moz-animation: cardHighlight 0.7s ease 2s 2;
+    -o-animation: cardHighlight 0.7s ease 2s 2;
+    animation: cardHighlight 0.7s ease 2s 2;
+}
+
+.logo {
+	width: 151px;
+    height: 17px;
+    top: 12px;
+    background: url("../images/T_SamsungLogo.png") 0 0 no-repeat;
+    background-size: 60%;	
+}
+
+.logo-container {
+	margin-top:15px;
+	margin-left:15px;
+}
+
+.logo-name {
+    width: 202px;
+    height: 34px;
+    top: 0;
+    left: 0;
+    background: url("../images/T_GalaxyLogo.png") 0 0 no-repeat;
+}
+
+
+.description {
+    width: 674px;
+    height: 33px;
+    bottom: 0;
+    left: 0px;
+    background-repeat: no-repeat;
+	background-image: url(/samsung-test/images/T_Text0.png);
+	
+}
+
+.show .description {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-out 0s;
+    -moz-transition: opacity 1s ease-out 0s;
+    -o-transition: opacity 1s ease-out 0s;
+    transition: opacity 1s ease-out 0s;
+
+
+}
+
+.description-fade-aria {
+    opacity: 1;
+    width: 674px;
+    height: 33px;
+    bottom: 0;
+    left: 0px;
+	
+}
+
+.fade.description-fade-aria {
+    opacity: 0;
+    background: white;
+    z-index: 5;
+    -webkit-transition: opacity 0.3s ease-out 0s;
+    -moz-transition: opacity 0.3s ease-out 0s;
+    -o-transition: opacity 0.3s ease-out 0s;
+    transition: opacity 0.3s ease-out 0s;
+}
+
+.draginfo {
+    opacity: 0;
+    width: 110px;
+    height: 41px;
+    top: 30px;
+    right: 36px;
+    background: url("../images/T_SliderText.png") 0 0 no-repeat;
+}
+
+.show .draginfo {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-out 0.5s;
+    -moz-transition: opacity 1s ease-out 0.5s;
+    -o-transition: opacity 1s ease-out 0.5s;
+    transition: opacity 1s ease-out 0.5s;
+}
+
+.close-ad {
+    width: 72px;
+    height: 24px;
+    top: 0;
+    right: 0;
+    font-family: arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+
+.buy-now {
+    opacity: 0;
+    width: 133px;
+    height: 42px;
+    bottom: 22px;
+    right: 35px;
+    background: url("../images/T_CTA.png") 0 0 no-repeat;
+}
+
+.show .buy-now {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-out 1s;
+    -moz-transition: opacity 1s ease-out 1s;
+    -o-transition: opacity 1s ease-out 1s;
+    transition: opacity 1s ease-out 1s;
+}
+
+.flash {
+    z-index: 0;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 83px;
+    left: 372px;
+    margin-left: -250px;
+    margin-top: -250px;
+    background: url("../images/flash.png") center no-repeat;
+    background-size: 0;
+}
+
+.light.flash {
+    z-index: 2;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+    background-size: 100%;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+}
+
+input[type=range] {
+    z-index: 2;
+    -webkit-appearance: none;
+    position: absolute;
+    bottom: -200px;
+    right: 80px;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    cursor: move;
+}
+
+.show input[type=range] {
+
+    bottom: 50%;
+    -webkit-transition: bottom 0.7s ease-out 0.2s;
+    -moz-transition: bottom 0.7s ease-out 0.2s;
+    -o-transition: bottom 0.7s ease-out 0.2s;
+    transition: bottom 0.7s ease-out 0.2s;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    border-radius: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background: #000;
+    -webkit-appearance: none;
+    margin-top: -10px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    border-radius: 10px;
+}
+
+input[type=range]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background: #000;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 1px;
+    background: transparent;
+    border-color: transparent;
+    border-width: 10px 0;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background: #000;
+}
+
+input[type=range]::-ms-tooltip {
+    display: none;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #ccc;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
