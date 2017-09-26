@@ -131,22 +131,22 @@ var SamsungAd = function () {
         if (Number(e.target.value) < maxIndex / 4) {
             if (this.descriptState == 0) return this;
             this.toggleClass(this.descriptFadeAria, 'fade', delay);
-            this.descriptContainer.style.backgroundImage  = 'url("/images/T_Text' + 0 + '.png")';
+            this.descriptContainer.style.backgroundImage  = 'url("/testwork/images/T_Text' + 0 + '.png")';
             this.descriptState = 0;
         } else if (Number(e.target.value) < maxIndex / 2.25) {
             if (this.descriptState == 1) return this;
             this.toggleClass(this.descriptFadeAria, 'fade', delay);
-            this.descriptContainer.style.backgroundImage  ='url("/images/T_Text' + 1 + '.png")';
+            this.descriptContainer.style.backgroundImage  ='url("/testwork/images/T_Text' + 1 + '.png")';
             this.descriptState = 1;
         } else if (Number(e.target.value) < maxIndex / 1.25) {
             if (this.descriptState == 2) return this;
             this.toggleClass(this.descriptFadeAria, 'fade', delay);
-            this.descriptContainer.style.backgroundImage  = 'url("/images/T_Text' + 2 + '.png")';
+            this.descriptContainer.style.backgroundImage  = 'url("/testwork/images/T_Text' + 2 + '.png")';
             this.descriptState = 2;
         } else if (Number(e.target.value) < maxIndex) {
             if (this.descriptState == 3) return this;
             this.toggleClass(this.descriptFadeAria, 'fade', delay);
-            this.descriptContainer.style.backgroundImage  = 'url("/images/T_Text' + 3 + '.png")';
+            this.descriptContainer.style.backgroundImage  = 'url("/testwork/images/T_Text' + 3 + '.png")';
             this.descriptState = 3;
         }
         return this;
